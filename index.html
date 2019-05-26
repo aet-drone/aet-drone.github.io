@@ -19,12 +19,32 @@
         <div class="section-inner">
             <h2>About us</h2>
             <p>something.....</p>
-            <h3>Achievements</h3>
+        </div>
+    </section>
+    <section id="about">
+        <div class="section-inner">
+            <h2>Know About Our Projects</h2>
+            <p>Projects:</p>
             <ul>
-                <li>something....</li>
-                <li>more..</li>
-                <li>more..</li>
+                <li>links..</li>
             </ul>
+        </div>
+    </section>
+    <section id="about">
+        <div class="section-inner">
+            <h2>Our Members</h2>
+            <p>Members:</p>
+            <ul>
+                <li>links..</li>
+            </ul>
+        </div>
+    </section>
+    <section id="about">
+        <div class="section-inner">
+            <h2>Missions</h2>
+            <p>Our missions:</p>
+            <h3>Fututre Plans</h3>
+            <p>Plans:</p>
         </div>
     </section>
     <section id="about">
@@ -33,14 +53,71 @@
             <p>something.....</p>
             <h3>titile of the video</h3>
             <h4><iframe width="560" height="315" src="https://www.youtube.com/embed/AtxsA_rbyc8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></h4>
-            <ul>
-                <li>something....</li>
-                <li>more..</li>
-                <li>more..</li>
-            </ul>
         </div>
     </section>
 
+    <section id="slide">
+        <div class="section-inner">
+            <h2>Automatic Slideshow</h2>
+            <p>Change image every 2 seconds:</p>
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="frnt.jpg" style="width:50%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="front.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="frnt.jpg" style="width:50%">
+                <div class="text">Caption Three</div>
+            </div>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
+
+    </section>
+    <section id="about">
+        <div class="section-inner">
+            <h2>Our Achievements </h2>
+            <p>something.....</p>
+            <h3>Research Papers </h3>
+            <p>something.....</p>
+        </div>
+    </section>
     <section id="contact">
         <div class="section-inner">
             <h2>Contact us</h2>
@@ -48,7 +125,7 @@
             <ul>
                 <li>links..</li>
             </ul>
-            <p>Or, you can ":mail address"</p>
+            <p>"Or, you can ":mail address"</p>
         </div>
     </section>
 </main>
